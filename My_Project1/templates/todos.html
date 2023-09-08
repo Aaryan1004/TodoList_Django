@@ -1,0 +1,15 @@
+{% extends 'index.html' %}
+
+{% block title %} Title {% endblock title %}
+
+
+{% block body %}   
+<h1>Hi {{username}} </h1>
+
+{% for task in todos%}
+{% for task_name,task_status in task.items%}
+<div> {{task_name}} </div>
+<div> {{task_status}} </div>
+{% endfor%}<br><br>
+{% endfor %}
+{% endblock body%}
